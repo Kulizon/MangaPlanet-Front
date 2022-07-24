@@ -1,0 +1,23 @@
+netflix like containers (functions: hide, add/delete from favourite, add to readlist, go to specified page)  
+	- mangas to finish
+	- gaining popularity
+	- best mangas
+specified manga pages 
+	- reviews 
+	- rates
+	- popularity (reards or visits)
+	- description
+	- author, publication date, genre, characters
+manga read page
+	- zoom
+	- vertical or horizontal (2 columns or 1 column
+
+
+user profile
+	- sample fav manga
+	- sample read manga
+	- sample reviews 
+	- statisctics
+		- number of read manga
+		- enter date
+		- number reviews
