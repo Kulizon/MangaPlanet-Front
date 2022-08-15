@@ -1,0 +1,102 @@
+@import "./../../../../scss/variables";
+
+.info {
+  background: $drk-3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0 2rem;
+  border-radius: 20px;
+  position: relative;
+
+  * {
+    z-index: 2;
+  }
+
+  .background-image {
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    > div {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+    }
+  }
+
+  .image-container {
+    align-self: center;
+    transform: translateY(-3rem);
+  }
+
+  .card {
+    background: $drk-3;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    transform: scale(110%);
+
+    h1 {
+      color: $lght-1;
+    }
+
+    h1,
+    h5 {
+      font-size: 2rem;
+      transform: translateY(-2rem);
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 0.9rem;
+      font-weight: $font-weight-thn;
+      margin-top: -0.25rem;
+      color: $lght-4;
+    }
+
+    .statistics {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-size: 1.4rem;
+        color: $lght-2;
+      }
+
+      h4 {
+        font-size: 1rem;
+        margin-left: 1rem;
+        font-weight: $font-weight-thn;
+        color: $lght-3;
+
+        span {
+          color: $main;
+          font-weight: $font-weight-bld;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .background-image {
+    display: none;
+    background: red;
+  }
+
+  .info {
+    min-width: 400px;
+    background: none;
+    align-self: center;
+
+    .card {
+      width: 90%;
+      padding: 2rem 2.5rem;
+      margin: auto;
+    }
+  }
+}

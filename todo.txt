@@ -1,23 +1,51 @@
-netflix like containers (functions: hide, add/delete from favourite, add to readlist, go to specified page)  
-	- mangas to finish
-	- gaining popularity
-	- best mangas
+todo 10.08: 
+	- readlist ** done **
+	- link in every username to profile (comments, reviews) ** done **
+	- colors ** done ** 
+	- styles ** done **
+	- change password username and email in options ** done **
+	- responsivness ** done **
+	- comment your code ** done **
+	- deployyyyyyyy
+	- populate backend
+
+
+
+
+
+
+
+
+
+
+
+
+
+netflix like containers 
+	- today's selection ** done **
+	- recently added mangas ** done **
+	- mangas with new chapters  ** done **
+
 specified manga pages 
-	- reviews 
-	- rates
-	- popularity (reards or visits)
-	- description
-	- author, publication date, genre, characters
+	- reviews ** done **
+	- rates ** done **
+	- popularity (reads or visits) ** done **
+	- description ** done **
+	- author, publication date, genre, characters ** done **
+
 manga read page
-	- zoom
-	- vertical or horizontal (2 columns or 1 column
-
-
+	- zoom ** done **
+	- vertical or horizontal (2 columns or 1 column or flip pages) ** done **
+	- QUALITY OPTIONS	** done **
+	- next chapter, prev chapter
+	- comments ** done **
+	
 user profile
-	- sample fav manga
-	- sample read manga
-	- sample reviews 
+	- sample fav manga ** done **
+	- sample read manga ** done **
+	- sample reviews ** done **
 	- statisctics
-		- number of read manga
-		- enter date
-		- number reviews
+		- number of read manga ** done **
+		- enter date ** done **
+		- number of reviews ** done **
+	- set profile picture ** done **

@@ -1,0 +1,69 @@
+@import "./../../../scss/variables";
+
+.container {
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+
+  > ul {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    li {
+      margin-right: 2rem;
+    }
+
+    a:first-of-type {
+      margin-left: 3rem;
+    }
+
+    > span {
+      position: absolute;
+      height: 60px;
+      width: 20px;
+      left: 17px;
+      top: 0px;
+      border-radius: 3px;
+    }
+
+    > div {
+      width: 100%;
+      margin-left: 3rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  h2 {
+    font-weight: $font-weight-bld;
+    font-size: 1.75rem;
+    color: $lght-1;
+    transition: 0.15s;
+
+    &.hover-effect:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container ul {
+    span {
+      display: none;
+    }
+
+    > div {
+      margin-left: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0.25rem;
+
+      > li {
+        margin-right: 0;
+      }
+    }
+  }
+}

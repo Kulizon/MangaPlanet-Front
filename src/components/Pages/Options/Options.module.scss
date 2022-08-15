@@ -1,0 +1,46 @@
+@import "./../../../scss/variables";
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: $lght-1;
+    font-weight: $font-weight-thn;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+
+    span {
+      font-weight: $font-weight-bld;
+      color: $main;
+      font-size: 1.2rem;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 500px;
+    border-bottom: 1px solid $drk-5;
+    padding: 0 3rem 2rem;
+
+    input {
+      margin-bottom: 0.75rem;
+
+      &:last-of-type {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    button {
+      align-self: flex-start;
+    }
+
+    .show-password-button {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

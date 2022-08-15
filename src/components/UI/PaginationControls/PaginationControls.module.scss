@@ -1,0 +1,18 @@
+@import './../../../scss/variables';
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10rem;
+
+  h5 {
+    font-size: 1rem;
+    color: $lght-2;
+  }
+}
+
+.off {
+  opacity: 0.35;
+  pointer-events: none;
+}

@@ -1,0 +1,48 @@
+@import "./scss/variables";
+
+.app {
+  background-color: $drk-2;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: $header-height;
+}
+
+body {
+  width: 100%;
+}
+
+main {
+  background: $drk-2;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: rgba($drk-1, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.backdrop-visible {
+  opacity: 1;
+  z-index: 200;
+  pointer-events: initial;
+}
+
+.rectangle {
+  border-radius: 5px !important;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 2rem 1rem;
+  }
+}

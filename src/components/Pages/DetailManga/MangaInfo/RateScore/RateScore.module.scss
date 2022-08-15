@@ -1,0 +1,29 @@
+@import './../../../../../scss/variables';
+
+.stars {
+  position: relative;
+
+  i {
+    color: $main;
+    font-size: 1.5rem;
+  }
+
+  div {
+    position: relative;
+    z-index: 3;
+    display: flex;
+
+    &.behind {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+
+      i {
+        color: #fff;
+        transform: scale(85%);
+        transform-origin: center;
+      }
+    }
+  }
+}

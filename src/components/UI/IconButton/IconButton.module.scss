@@ -1,0 +1,27 @@
+@import "./../../../index.scss";
+
+.button {
+  background: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $drk-2;
+  border-radius: 360px;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.25s;
+  border: 2px solid $drk-5;
+
+  &:hover {
+    opacity: 0.85s;
+  }
+
+  i {
+    font-size: 1rem;
+    color: $lght-2;
+    transform: rotate(0);
+    transition: 0.25s;
+  }
+}

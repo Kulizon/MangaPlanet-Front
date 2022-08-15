@@ -1,0 +1,92 @@
+@import "./../../../scss/variables";
+
+.card {
+  margin: 0.5rem;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background: $drk-3;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 1rem;
+  transition: 0.25s;
+
+  &:hover {
+    h4 {
+      font-size: 1.25rem;
+      top: 0.25rem;
+    }
+
+    > div {
+      bottom: 0%;
+      box-shadow: 0 -30px 15px $drk-3;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 80%;
+    border-radius: 5px;
+    transform: translateX(50%);
+    right: 50%;
+  }
+
+  > div {
+    background: $drk-3;
+    box-shadow: 0 -10px 10px $drk-3;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    bottom: -20%;
+    height: 35%;
+    width: 100%;
+    z-index: 2;
+    transform: translateX(50%);
+    right: 50%;
+    transition: 0.25s;
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h4 {
+      position: absolute;
+      top: 0.5rem;
+      left: 1rem;
+      color: $lght-1;
+      transition: 0.25s;
+      font-weight: $font-weight-nrml;
+      font-size: 1rem;
+    }
+
+    .stars {
+      position: absolute;
+      top: 3.3rem;
+      left: 1rem;
+
+      div:first-of-type i {
+        transform: scale(74%);
+      }
+
+      i {
+        font-size: 1rem;
+      }
+    }
+
+    h5 {
+      position: absolute;
+      top: 3.5rem;
+      left: 1rem;
+      color: $lght-2;
+      transition: 0.5s;
+      font-weight: $font-weight-thn;
+
+      &:last-of-type {
+        top: 4.5rem;
+      }
+    }
+  }
+}

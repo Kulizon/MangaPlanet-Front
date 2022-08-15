@@ -1,0 +1,12 @@
+@import "./../../../../scss/variables";
+
+.textarea {
+  border-radius: 5px;
+  background: $drk-4;
+  border: 1px solid $drk-5;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  resize: none;
+  color: $lght-2;
+  font-weight: $font-weight-thn;
+}

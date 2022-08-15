@@ -1,0 +1,128 @@
+@import "./../../../../scss/variables";
+
+$image-gap: 2rem;
+
+.manga {
+  display: grid;
+  grid-template-columns: 20rem auto;
+  grid-template-rows: 4rem 2.5rem auto;
+  max-width: 1200px;
+  position: relative;
+  margin-top: 2rem;
+
+  h2 {
+    grid-row: 1/2;
+    grid-column: span 2;
+    background: $drk-3;
+    padding-left: $image-gap;
+    color: $lght-1;
+    border-radius: 0 5px 0 0;
+    font-size: 1.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .add-to {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background: $drk-3;
+    padding: 0 $image-gap;
+
+    > div {
+      display: flex;
+
+      > div {
+        margin-right: 1rem;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  > p {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    padding: 1rem $image-gap 3.5rem;
+    background: $drk-3;
+    border-radius: 0 0 5px 0;
+    position: relative;
+    z-index: 2;
+    color: $lght-2;
+    font-weight: $font-weight-thn;
+
+    button {
+      position: absolute;
+      bottom: 1rem;
+      right: $image-gap;
+    }
+  }
+
+  .rotate {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  .detailed-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem;
+    grid-column: 2/4;
+    grid-row: 4/5;
+    grid-column: 2/5;
+    margin-top: 1rem;
+    color: $lght-4;
+    padding-left: $image-gap;
+    transform: translateY(0);
+    transition: 0.25s;
+    opacity: 1;
+
+    &.hidden {
+      transform: translateY(-5rem);
+      opacity: 0;
+    }
+  }
+
+  .image-container {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    background: $drk-1;
+    top: -2rem;
+    padding: 1.5rem;
+    transform: translateY(-2rem);
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .manga {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    .image-container {
+      max-width: 350px;
+      margin: auto;
+      z-index: 10;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: 0;
+    }
+
+    h2 {
+      margin-top: 18rem;
+      padding-top: 15rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "./../../../../scss/variables";
+
+.heading {
+  align-self: center;
+  color: $lght-1;
+  margin-bottom: 1rem;
+  font-weight: $font-weight-nrml;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  align-self: center;
+  width: 100%;
+
+  input {
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    align-self: center;
+    margin-top: 1rem;
+  }
+}

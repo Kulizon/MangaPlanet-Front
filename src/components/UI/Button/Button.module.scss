@@ -1,0 +1,34 @@
+@import "./../../../scss/variables";
+
+.button {
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  background: $lght-1;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: $font-weight-bld;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $drk-1;
+
+  i {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    background: rgba($lght-1, 0.6);
+  }
+
+  &.alt {
+    background: $lght-4;
+    color: $lght-1;
+
+    &:hover {
+      background: rgba($lght-4, 0.6);
+    }
+  }
+}

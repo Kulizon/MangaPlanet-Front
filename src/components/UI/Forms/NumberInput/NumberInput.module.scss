@@ -1,0 +1,11 @@
+@import "./../../../../scss/variables";
+
+.input {
+  font-size: 1.25rem;
+  padding: 0.25rem 0rem 0.25rem 0.4rem;
+  height: 2rem;
+  background: $drk-4;
+  border-radius: 5px;
+  border: 1px solid $drk-5;
+  color: $lght-2;
+}

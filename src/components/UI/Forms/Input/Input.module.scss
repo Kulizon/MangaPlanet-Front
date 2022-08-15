@@ -1,0 +1,9 @@
+@import "./../../../../scss/variables";
+
+.input {
+  border-radius: 5px;
+  border: 1px solid $drk-5;
+  background: $drk-4;
+  padding: 0.5rem 1rem;
+  color: $lght-2;
+}

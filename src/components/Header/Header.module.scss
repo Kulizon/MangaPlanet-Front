@@ -1,0 +1,193 @@
+@import "./../../scss/variables";
+
+.header {
+  position: fixed;
+  background: $drk-2;
+  height: $header-height;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    transition: 0.15s;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+
+    h1 {
+      font-size: 2rem;
+
+      color: rgba($main, 1);
+    }
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: rgba($main, 0.85);
+      margin-left: 1rem;
+    }
+  }
+
+  > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, rgba($drk-1, 0.8) 10%, rgba($drk-1, 0.3));
+    padding: 0 2rem;
+    height: 100%;
+  }
+
+  div > div {
+    display: flex;
+    align-items: center;
+
+    > a {
+      margin-left: 1rem;
+      font-size: 1.1rem;
+      color: $lght-2;
+
+      i {
+        color: $lght-1;
+        margin: 0 0.4rem 0 0.6rem;
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .main-button-container {
+    position: relative;
+
+    button {
+      position: relative;
+      z-index: 2;
+    }
+
+    .menu {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 12rem;
+
+      ul {
+        transform: translateY(-0.5rem);
+        opacity: 0;
+        right: 0;
+        width: 12rem;
+        transition: 0.25s;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background: rgba($drk-1, 0.6);
+        display: none;
+
+        li {
+          cursor: pointer;
+          margin: 0.5rem 0;
+          margin-left: 1rem;
+          font-size: 1.1rem;
+          color: $lght-2;
+
+          i {
+            color: $lght-1;
+            width: 2rem;
+            border-right: 1px solid $drk-5;
+            margin-right: 0.4rem;
+          }
+
+          a {
+            color: $lght-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  ul {
+    display: initial !important;
+    opacity: 1 !important;
+    transform: translateY(1.5rem) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    > div {
+      padding: 0 1rem;
+    }
+
+    div .desktop-menu {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: initial;
+    }
+
+    // not backdrop
+    div .mobile-menu div:not(:first-of-type) {
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 18rem;
+      background: $drk-1;
+      transform: translateX(100%);
+      transition: 0.3s;
+      z-index: 300;
+
+      // search-box
+      > div:first-of-type {
+        margin-top: 1rem;
+      }
+
+      &.menu-visible {
+        transform: translateX(0);
+      }
+
+      ul.menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        li {
+          border-bottom: 1px solid $drk-5;
+          margin: 0;
+          padding: 1rem 1.25rem 0.5rem;
+
+          a,
+          button {
+            background: none;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+
+        a,
+        li,
+        button {
+          font-size: 1.1rem;
+          color: $lght-2;
+          margin: 0;
+
+          i {
+            color: $lght-1;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

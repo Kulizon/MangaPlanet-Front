@@ -1,0 +1,124 @@
+@import "./../../../../../scss/variables";
+
+.review {
+  background: $drk-3;
+  padding: 1.5rem;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 150px auto;
+  grid-template-rows: 7rem 2rem auto;
+  column-gap: 2rem;
+
+  h3 {
+    color: $lght-1;
+    font-weight: $font-weight-nrml;
+    margin-right: 3.1rem;
+
+    a {
+      color: $main;
+      font-weight: $font-weight-bld;
+    }
+  }
+
+  &.hidden-image {
+    display: flex;
+    flex-direction: column;
+
+    h5 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .delete-container {
+    display: flex;
+    align-items: center;
+
+    > div {
+      transform: scale(80%);
+    }
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 360px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    opacity: 1;
+    transition: 0.15s;
+
+    h3 {
+      grid-column: 1/2;
+      color: $lght-2;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  h5 {
+    margin-bottom: 2rem;
+    grid-column: 1/2;
+    color: $lght-3;
+    font-weight: $font-weight-thn;
+    font-size: 1.1rem;
+  }
+
+  p {
+    grid-row: 1/4;
+    grid-column: 2/3;
+    color: $lght-2;
+    font-weight: $font-weight-thn;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    justify-self: flex-start;
+  }
+
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(15deg) translate(0.75rem, -2.75rem);
+    font-size: 2.5rem;
+    background: $drk-4;
+    border-radius: 360px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+
+    .positive {
+      color: $positive;
+    }
+
+    .negative {
+      color: $negative;
+    }
+
+    .neutral {
+      color: $lght-4;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .review {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .review {
+    margin-right: 1.25rem;
+  }
+}

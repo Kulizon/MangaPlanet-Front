@@ -1,0 +1,65 @@
+@import "./../../../../scss/variables";
+
+.volumes {
+  margin: 4rem 0;
+  display: flex;
+  position: relative;
+  padding-bottom: 2rem;
+
+  > li {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    h5 {
+      color: $lght-1;
+      background: $drk-2;
+      position: relative;
+      z-index: 16;
+      align-self: center;
+      margin-top: 0.2rem;
+      font-size: 1rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 170px;
+      position: relative;
+      z-index: 16;
+      height: 100%;
+    }
+  }
+
+  .chapters {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    transition: 0.25s;
+    top: 18rem;
+    background: $drk-3;
+    padding: 0.5rem 1rem;
+    opacity: 1;
+    cursor: initial;
+    border-radius: 5px;
+    z-index: 15;
+
+    &.hidden {
+      top: 16rem;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    a {
+      margin-right: 2rem;
+      color: $lght-3;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}

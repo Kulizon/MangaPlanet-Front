@@ -1,0 +1,26 @@
+@import "./scss/variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-family;
+}
+
+button,
+textarea,
+input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}

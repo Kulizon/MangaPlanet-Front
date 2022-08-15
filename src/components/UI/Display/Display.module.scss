@@ -1,0 +1,15 @@
+@import "./../../../scss/variables";
+
+.reviews-heading {
+  color: $lght-1;
+  margin: 0 0 0.5rem;
+}
+
+.go-back-button {
+  align-self: flex-start;
+  margin-bottom: 2rem;
+
+  i {
+    transform: rotate(180deg);
+  }
+}
