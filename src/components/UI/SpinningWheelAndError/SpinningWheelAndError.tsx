@@ -1,6 +1,10 @@
 import styles from "./SpinningWheelAndError.module.scss";
 
-const SpinningWheelAndError = (props: { error: string; loading: boolean; className?: string }) => {
+const SpinningWheelAndError = (props: {
+  error: string;
+  loading: boolean;
+  className?: string;
+}) => {
   const { error, loading } = props;
 
   if (!error && !loading) return <></>;
@@ -14,7 +18,9 @@ const SpinningWheelAndError = (props: { error: string; loading: boolean; classNa
           <div></div>
         </div>
       )}
-      {error && <p>{error}</p>}
+      {error && (
+        <p>{typeof error === "string" ? error : "Server error occured..."}</p>
+      )}
     </div>
   );
 };
